@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import blogRouter from '../modules/rentalListing/blog.routes'
+import listingRouter from '../modules/rentalListing/blog.routes'
 import userRouter from '../modules/auth/user.routes'
 
 const router = Router()
@@ -7,7 +7,7 @@ const router = Router()
 const routers = [
   {
     path: '/blogs',
-    router: blogRouter,
+    router: listingRouter,
   },
   {
     path: '/',

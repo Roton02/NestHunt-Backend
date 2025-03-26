@@ -2,12 +2,12 @@ import config from '../../config'
 import AppError from '../../error/AppError'
 import IUser from '../auth/user.interface'
 import { user } from '../auth/user.model'
-import IBlog from './blog.interface'
-import { blog } from './blog.model'
+import IBlog from './listing.interface'
+import { blog } from './listing.model'
 import jwt, { JwtPayload } from 'jsonwebtoken'
 
 const createBlogIntroDB = async (payload: IBlog, token: string) => {
-  const decodeUser =  jwt.verify(
+  const decodeUser = jwt.verify(
     token,
     config.JWT_SECRET as string
   ) as JwtPayload
