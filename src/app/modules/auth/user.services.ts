@@ -1,6 +1,6 @@
 import config from '../../config'
 import AppError from '../../error/AppError'
-import { blog } from '../Blog/blog.model'
+import { blog } from '../rentalListing/blog.model'
 import IUser, { IloginUser } from './user.interface'
 import { user } from './user.model'
 import bcrypt from 'bcrypt'
