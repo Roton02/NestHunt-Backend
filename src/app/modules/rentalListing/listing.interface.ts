@@ -1,6 +1,6 @@
 import { Types } from 'mongoose'
 
-interface ILinting {
+interface IListing {
   landLoardId: Types.ObjectId
   location: string
   description: string
@@ -10,4 +10,4 @@ interface ILinting {
   isDeleted: boolean
 }
 
-export default ILinting
+export default IListing

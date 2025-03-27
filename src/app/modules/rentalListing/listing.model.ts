@@ -1,7 +1,7 @@
 import { model, Schema } from 'mongoose'
-import ILinting from './listing.interface'
+import IListing from './listing.interface'
 
-const blogSchema = new Schema<ILinting>(
+const blogSchema = new Schema<IListing>(
   {
     landLoardId: {
       type: Schema.Types.ObjectId,
@@ -38,4 +38,4 @@ const blogSchema = new Schema<ILinting>(
   }
 )
 
-export const listing = model<ILinting>('listing', blogSchema)
+export const listing = model<IListing>('listing', blogSchema)

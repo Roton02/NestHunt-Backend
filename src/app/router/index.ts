@@ -1,12 +1,12 @@
 import { Router } from 'express'
-import listingRouter from '../modules/rentalListing/blog.routes'
+import listingRouter from '../modules/rentalListing/listing.routes'
 import userRouter from '../modules/auth/user.routes'
 
 const router = Router()
 
 const routers = [
   {
-    path: '/blogs',
+    path: '/listing',
     router: listingRouter,
   },
   {
