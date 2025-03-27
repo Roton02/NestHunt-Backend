@@ -20,10 +20,15 @@ const getAllListingIntroDB = async () => {
   const result = await listing.find()
   return result
 }
+const getSingleListingIntoDB = async (id: string) => {
+  const result = await listing.findById(id)
+  return result
+}
 
 export const listingServices = {
   createListingIntroDB,
   updateListingIntroDB,
   deleteListingIntroDB,
   getAllListingIntroDB,
+  getSingleListingIntoDB,
 }

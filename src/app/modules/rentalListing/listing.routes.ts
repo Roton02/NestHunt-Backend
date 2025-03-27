@@ -15,6 +15,7 @@ listingRouter.post(
   listingController.createListing
 )
 
+listingRouter.get('/:id', listingController.getSingleListing)
 listingRouter.get('/', listingController.getAllListing)
 
 export default listingRouter

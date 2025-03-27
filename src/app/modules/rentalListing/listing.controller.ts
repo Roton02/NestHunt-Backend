@@ -44,10 +44,21 @@ const getAllListing = catchAsync(async (req: Request, res: Response) => {
     data: result,
   })
 })
+const getSingleListing = catchAsync(async (req: Request, res: Response) => {
+  // console.log(req.query)
+  const result = await listingServices.getSingleListingIntoDB(req.params.id)
+  sendResponse(res, {
+    success: true,
+    message: 'Blogs fetched successfully',
+    statusCode: 200,
+    data: result,
+  })
+})
 
 export const listingController = {
   createListing,
   updateListing,
   deleteListing,
   getAllListing,
+  getSingleListing,
 }
